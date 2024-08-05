@@ -24,3 +24,9 @@ const images = [
     alt: "Lighthouse Coast Sea",
   }
 ];
+
+const list = document.querySelector('.gallery');
+const markup = images.map(({ url, alt }) => `<li><img src="${url}" alt="${alt}" width="360" height="300"></li>`).join('');
+list.insertAdjacentHTML('afterbegin', markup);
+
+markup.classList.add('gallery-item');
